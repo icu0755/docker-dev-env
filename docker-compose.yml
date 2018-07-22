@@ -11,3 +11,10 @@ services:
 #      - MYSQL_ALLOW_EMPTY_PASSWORD=1
     ports:
       - "3306:3306"
+  postgres:
+    image: postgres:10.4
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=mydb
+    ports:
+      - "5432:5432"
